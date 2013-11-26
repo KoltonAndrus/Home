@@ -1,0 +1,92 @@
+vbell on
+vbell_msg "Ring"
+
+# detach on hangup
+autodetach on 
+
+# don't display copyright page
+startup_message off 
+
+# scroll back 
+defscrollback 10000
+
+
+# setup the caption 
+hardstatus alwayslastline "%{-b gk}%-w%{+b kg}%50>%n %t%{-b gk}%+w %=%C%<"
+
+# right/left bindings 
+#bindkey "^[[c" next 
+#bindkey "^[[d" prev 
+#bindkey "^[[b" focus
+
+# Set the altscreen so that when you quit vi, it will go back to
+# what it was before
+altscreen on
+shell /usr/bin/zsh
+
+# Multi user screen access
+#multiuser on
+
+#acladd fornacia 
+#acladd aaronson 
+
+# Make screen and vim play nicer? 
+maptimeout 5
+
+# 
+## do not trash BackSpace, usually DEL
+bindkey -k kb 
+bindkey -d -k kb
+
+# 
+## do not trash Delete, usually ESC [ 3 ~ 
+bindkey -k kD 
+bindkey -d -k kD
+
+# log that failure
+
+#log on 
+#logfile ~/.screen/output/screenlog 
+
+
+# Emacs keybinding stuff
+# emacs keybindings for navigation in copy mode 
+#markkeys ^B=Y:^F=V:h=^B:l=^F:0=^A:$=^E 
+
+# can't do in markkeys :B=\M-B:w=\M-F:^=^A
+#markkeys j=^N:k=^P:l=^F:0=^A:$=^E:^F=^V
+
+
+# page up/down
+#bindkey -m -t ^[vstuff^u 
+#bindkey -m^B stuff H 
+
+# forward/back word 
+#bindkey -m -t ^[fstuff w 
+#bindkey -m -t ^[bstuff b 
+# 
+
+## top/bottom of buffer 
+#bindkey -m -t ^[<stuff g 
+#bindkey -m -t ^[>stuff G 
+
+# special hack for C-e, since it should go *past* 
+# the last char. -m means this is for copy mode only. 
+#bindkey -m ^e stuff "$^f"
+
+
+# Setup the actual screens
+split
+chdir /source/server
+screen -t project 
+focus down
+resize 15
+screen -t build
+chdir ~
+screen
+screen
+screen
+screen -t Tomcat /home/kolton/snippets/edge/api_startup.sh & 
+screen -t IDE eclipse &
+screen -t IRC irssi
+focus up
