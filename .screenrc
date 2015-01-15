@@ -22,7 +22,8 @@ hardstatus alwayslastline "%{-b gk}%-w%{+b kg}%50>%n %t%{-b gk}%+w %=%C%<"
 # Set the altscreen so that when you quit vi, it will go back to
 # what it was before
 altscreen on
-shell /usr/bin/zsh
+shell /bin/zsh
+#shell /usr/local/bin/fish
 
 # Multi user screen access
 #multiuser on
@@ -77,16 +78,24 @@ bindkey -d -k kD
 
 # Setup the actual screens
 split
-chdir /source/server
+chdir /source/edge/server
 screen -t project 
 focus down
 resize 15
 screen -t build
-chdir ~
+chdir /users/Kolton
 screen
 screen
 screen
-screen -t Tomcat /home/kolton/snippets/edge/api_startup.sh & 
-screen -t IDE eclipse &
-screen -t IRC irssi
+chdir /snippets
+screen
+screen
+screen
+chdir $TOMCAT_HOME/webapps
+screen -t Tomcat 
+chdir $TOMCAT_HOME/logs
+screen -t Tomcat 
+
+#screen -t IDE eclipse &
+#screen -t IRC irssi
 focus up

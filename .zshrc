@@ -79,8 +79,7 @@ alias uuuu='cd ../../../../'
 alias uuuuu='cd ../../../../..'
 
 # cd short cuts
-hash -d cdserver=/source/edge/server
-#alias cdserver='cd /source/edge/server'
+alias cdserver='cd /source/edge/server'
 alias cdfit='cd /source/edge/fit'
 alias cdfiti='cd /source/edge/fit-impl'
 alias cdfits='cd /source/edge/fit-service'
