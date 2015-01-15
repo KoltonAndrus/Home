@@ -1,7 +1,20 @@
 #  Kolton
 # .zshrc
+autoload -U colors && colors
+autoload -U compinit
+compinit
+#zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 
-# Oh My Zsh (github/oh-my-zsh)
+# Don't autocorrect for me
+unsetopt correct
+unsetopt correct_all
+#setopt correctall
+
+# export a prompt to get eaten for non-oh-my-zsh boxes
+#export PROMPT="%B$fg[blue]%n@%b$fg[red]%M $fg[yellow]* $fg[green]%d %B$fg[white]%T%b> "
+export PROMPT="%m %{${fg_bold[blue]}%}:: %{$reset_color%}%{${fg[green]}%}%3~ %{${fg_bold[blue]}%}»%{${reset_color}%} "
+
+#Oh My Zsh (github/oh-my-zsh)
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 #fino-time frisk
@@ -17,12 +30,8 @@ bindkey ^r history-incremental-search-backward
 # allow v to edit the command line (standard behaviour)
 autoload -Uz edit-command-line
 bindkey -M vicmd 'v' edit-command-line
-
-# Don't autocorrect for me
-unsetopt correct
-unsetopt correct_all
-
 #allow tab completion in the middle of a word
+
 setopt COMPLETE_IN_WORD
 
 ## history
