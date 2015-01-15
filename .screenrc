@@ -10,7 +10,6 @@ startup_message off
 # scroll back 
 defscrollback 10000
 
-
 # setup the caption 
 hardstatus alwayslastline "%{-b gk}%-w%{+b kg}%50>%n %t%{-b gk}%+w %=%C%<"
 
@@ -31,7 +30,7 @@ shell /bin/zsh
 #acladd fornacia 
 #acladd aaronson 
 
-# Make screen and vim play nicer? 
+# Keep screen from interfering with Esc in vim
 maptimeout 5
 
 # 
@@ -45,10 +44,8 @@ bindkey -k kD
 bindkey -d -k kD
 
 # log that failure
-
 #log on 
 #logfile ~/.screen/output/screenlog 
-
 
 # Emacs keybinding stuff
 # emacs keybindings for navigation in copy mode 
@@ -56,7 +53,6 @@ bindkey -d -k kD
 
 # can't do in markkeys :B=\M-B:w=\M-F:^=^A
 #markkeys j=^N:k=^P:l=^F:0=^A:$=^E:^F=^V
-
 
 # page up/down
 #bindkey -m -t ^[vstuff^u 
@@ -96,6 +92,5 @@ screen -t Tomcat
 chdir $TOMCAT_HOME/logs
 screen -t Tomcat 
 
-#screen -t IDE eclipse &
 #screen -t IRC irssi
 focus up

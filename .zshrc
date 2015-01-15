@@ -177,4 +177,7 @@ function endFitCid () {
      curl -i -X POST "$FIT/v1/sessions/end?cid=$2"
 }
 
+preexec () {
+  echo -ne "\ek${1%% *}\e\\"
+}
 [[ -s "~/.zsh_netflix" ]] && source "~/.zsh_netflix"
