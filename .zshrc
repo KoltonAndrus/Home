@@ -17,7 +17,7 @@ export PROMPT="%m %{${fg_bold[blue]}%}:: %{$reset_color%}%{${fg[green]}%}%3~ %{$
 #Oh My Zsh (github/oh-my-zsh)
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
-#fino-time frisk
+#afowler fino-time frisk
 plugins=(git screen)
 DISABLE_AUTO_UPDATE=true
 [[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
@@ -180,4 +180,5 @@ function endFitCid () {
 preexec () {
   echo -ne "\ek${1%% *}\e\\"
 }
-[[ -s "~/.zsh_netflix" ]] && source "~/.zsh_netflix"
+
+[[ -e "$HOME/.zsh_netflix" ]] && source "$HOME/.zsh_netflix"
