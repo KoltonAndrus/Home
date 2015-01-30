@@ -1,0 +1,23 @@
+[user]
+	name = Kolton Andrus
+	email = kolton@netflix.com
+[core]
+	editor = vim
+	excludesfile = /Users/kolton/.gitignore
+[color]
+	ui = true
+[alias]
+    br = branch -a
+    s = status -s -u
+    dw = diff --color-words
+    who = shortlog -s --
+    vlog = log -p
+    slog = log --oneline --decorate
+    lg = log --graph
+    lpo = log --pretty=oneline --abbrev-commit --graph --decorate --all
+    reup = pull --rebase
+    busypeople = shortlog -6
+    busythisweek = shortlog --since=one.week.ago
+     
+[push]
+	default = matching
