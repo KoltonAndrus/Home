@@ -21,7 +21,7 @@ export PROMPT="%m %{${fg_bold[blue]}%}:: %{$reset_color%}%{${fg[green]}%}%3~ %{$
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 #afowler fino-time frisk
-plugins=(git screen)
+plugins=(git screen gradle)
 DISABLE_AUTO_UPDATE=true
 [[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 
