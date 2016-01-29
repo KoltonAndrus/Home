@@ -5,6 +5,9 @@ set background=dark
 
 syntax enable
 
+"" Execute Pathogen
+execute pathogen#infect()
+
 "" Enable filetype plugins
 filetype plugin on
 filetype indent on
