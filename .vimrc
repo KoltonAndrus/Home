@@ -1,9 +1,10 @@
-"Kolton
+" Kolton Andrus
+" .vimrc
+
+syntax enable
 
 colorscheme darkblue 
 set background=dark
-
-syntax enable
 
 "" Execute Pathogen
 execute pathogen#infect()
@@ -58,11 +59,21 @@ set noswapfile
 set foldcolumn=1
 
 " Smart way to move between windows
-"map <C-j> <C-W>j
-"map <C-k> <C-W>k
-"map <C-h> <C-W>h
-"map <C-l> <C-W>l
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
+nmap <C-n> :NERDTreeToggle<CR>
+
+" For regular expressions turn magic on
+set magic
+
+" Show matching brackets when text indicator is over them
+set showmatch 
+
+" How many tenths of a second to blink when matching brackets
+set mat=2
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -82,12 +93,3 @@ set foldcolumn=1
 "  vmap <D-j> <M-j>
 "  vmap <D-k> <M-k>
 "endif
-
-" For regular expressions turn magic on
-set magic
-
-" Show matching brackets when text indicator is over them
-set showmatch 
-
-" How many tenths of a second to blink when matching brackets
-set mat=2
