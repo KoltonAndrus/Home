@@ -71,10 +71,11 @@ nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
 
 " Map ctrl-w to close current buffer
-:map <C-w> :bdelete<kEnter>
+" Window movement prevents this, need to find a better way
+"nmap <C-w> :bdelete<cr>
 
 " Map ctrl-q to close the current window
-:map <C-q> :q!<kEnter>
+nmap <C-q> :q!<kEnter>
 
 " For regular expressions turn magic on
 set magic
