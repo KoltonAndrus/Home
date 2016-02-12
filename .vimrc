@@ -66,6 +66,16 @@ map <C-l> <C-W>l
 
 nmap <C-n> :NERDTreeToggle<CR>
 
+" Map ctrl-s to save
+nmap <c-s> :w<cr>
+imap <c-s> <esc>:w<cr>a
+
+" Map ctrl-w to close current buffer
+:map <C-w> :bdelete<kEnter>
+
+" Map ctrl-q to close the current window
+:map <C-q> :q!<kEnter>
+
 " For regular expressions turn magic on
 set magic
 
