@@ -1,6 +1,6 @@
 [user]
 	name = Kolton Andrus
-	email = kandrus@gmail.com
+	email = kolton@gremlininc.com
 [core]
 	editor = vim
 	excludesfile = /Users/kolton/.gitignore
@@ -8,8 +8,11 @@
 	ui = true
 [alias]
     br = branch -a
+    bd = branch -d
+    co = checkout -b 
+    rh = reset --hard
     s = status -s -u
-    dw = diff --color-words
+    d = diff --color-words
     who = shortlog -s --
     vlog = log -p
     slog = log --oneline --decorate
