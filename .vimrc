@@ -68,7 +68,7 @@ nmap <C-n> :NERDTreeToggle<CR>
 
 " Map ctrl-s to save
 nmap <c-s> :w<cr>
-imap <c-s> <esc>:w<cr>a
+imap <c-s> <esc>:w<cr>
 
 " Map ctrl-w to close current buffer
 " Window movement prevents this, need to find a better way
