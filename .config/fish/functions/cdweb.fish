@@ -1,3 +1,3 @@
 function cdweb
-    cd /source/gremlin-website
+    cd /source/gremlin/gremlin-website
 end
