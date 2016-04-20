@@ -1,3 +1,3 @@
 function ct
-    cargo test
+    cargo test -- --nocapture $argv
 end
