@@ -10,6 +10,8 @@
     br = branch -a
     bd = branch -d
     co = checkout -b 
+    cam = commit -a -m 
+    sw = checkout
     rh = reset --hard
     s = status -s -u
     d = diff --color-words
@@ -19,8 +21,8 @@
     lg = log --graph
     lpo = log --pretty=oneline --abbrev-commit --graph --decorate --all
     reup = pull --rebase
-    busypeople = shortlog -6
-    busythisweek = shortlog --since=one.week.ago
+    busy = shortlog -6
+    busyweek = shortlog --since=one.week.ago
      
 [push]
 	default = matching
