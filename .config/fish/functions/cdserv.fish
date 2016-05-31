@@ -1,3 +1,3 @@
 function cdserv
-    cd /source/gremlin/gremlin-service
+    cd /source/gremlin/service
 end
