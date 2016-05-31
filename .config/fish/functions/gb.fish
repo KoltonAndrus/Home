@@ -1,3 +1,3 @@
 function gb
-    gradle build $argv
+    gradle build shadowJar $argv
 end
