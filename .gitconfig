@@ -23,6 +23,8 @@
     reup = pull --rebase
     busy = shortlog -6
     busyweek = shortlog --since=one.week.ago
+    kolton = log --oneline --no-merges --author=kolton@gremlininc.com
+    matt = log --oneline --no-merges --author=matt@gremlininc.com
      
 [push]
-	default = matching
+	default = current 
