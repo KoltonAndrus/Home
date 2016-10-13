@@ -24,6 +24,11 @@ if has('mouse')
   set mouse=a
 endif
 
+"" Rust
+set hidden
+let g:racer_cmd = "/Users/kolton/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -48,7 +53,7 @@ set wrap "Wrap lines
 set ruler
 
 " Autoformat rust files on save
-let g:rustfmt_autosave = 1
+"let g:rustfmt_autosave = 1
 
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
