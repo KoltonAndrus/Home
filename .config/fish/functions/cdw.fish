@@ -1,3 +1,3 @@
 function cdw
-    cd /source/gremlin/gremlin-website
+    cd /source/gremlin/website
 end

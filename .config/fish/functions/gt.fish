@@ -1,3 +1,3 @@
 function gt
-    gradle test
+    gradle test $argv
 end
